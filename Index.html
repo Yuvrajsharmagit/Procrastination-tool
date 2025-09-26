@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+  <title>Life in Weeks</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="title">
+        <h1>Life in Weeks</h1>
+        <p class="subtitle">Each square is one week of an 80‑year life</p>
+      </div>
+
+      <div class="stats" role="status" aria-live="polite">
+        <div class="stat">
+          <div class="num" id="weeks-lived">—</div>
+          <div class="label">Weeks lived</div>
+        </div>
+        <div class="stat">
+          <div class="num" id="weeks-remaining">—</div>
+          <div class="label">Weeks remaining</div>
+        </div>
+        <div class="stat">
+          <div class="num" id="life-percent">—</div>
+          <div class="label">Completed</div>
+        </div>
+        <div class="stat">
+          <div class="num" id="goal-count">—</div>
+          <div class="label">Goal weeks</div>
+        </div>
+      </div>
+
+      <div class="legend" aria-label="Legend">
+        <span class="chip past">Past</span>
+        <span class="chip current">Current</span>
+        <span class="chip future">Future</span>
+        <span class="chip goal">Goal</span>
+      </div>
+
+      <div class="notice" id="storage-warning" hidden>
+        Local storage is unavailable; goal weeks and notes won’t persist.
+      </div>
+    </header>
+
+    <main class="timeline">
+      <aside class="ages" id="age-labels" aria-hidden="true"></aside>
+
+      <section class="years" id="years" aria-label="Life calendar grid"></section>
+    </main>
+
+    <div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+
+    <footer class="footer">
+      <p>Tip: Click to toggle a goal; right‑click a goal to add or edit a note.</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
 
